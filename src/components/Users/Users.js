@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Row, Col, Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import "./Users.css"
+
 
 function Users({ userData }) {
   const [searchName, setSearchName] = useState("");
@@ -41,7 +43,7 @@ function Users({ userData }) {
       <Row xs={2} md={4} lg={6} className="g-4">
         {found?.map((data) => {
           return (
-            <Col key={data.login.uuid}>
+            <Col className="mx-auto" key={data.login.uuid}>
               <Card>
                 <Card.Img
                   loading="lazy"
@@ -53,7 +55,7 @@ function Users({ userData }) {
                 </Card.Title>
                 <Card.Body>
                   <ListGroup>
-                    <ListGroupItem>{data.email}</ListGroupItem>
+                    <ListGroupItem><a href={"mailto:"+data.email}>{data.email}</a></ListGroupItem>
                     <ListGroupItem>{data.cell}</ListGroupItem>
                   </ListGroup>
                 </Card.Body>
