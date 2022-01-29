@@ -44,7 +44,7 @@ function Users({ userData }) {
         {found?.map((data) => {
           return (
             <Col className="mx-auto" key={data.login.uuid}>
-              <Card>
+              <Card className="h-100">
                 <Card.Img
                   loading="lazy"
                   variant="top"
