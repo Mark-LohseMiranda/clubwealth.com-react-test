@@ -40,7 +40,7 @@ function App() {
           <Tab>Cats</Tab>
           <Tab>Countries</Tab>
         </TabList>
-        <TabPanel><img id="welcome" src="./images/welcome-min.jpg" alt="welcome in many languages"/></TabPanel>
+        <TabPanel><img id="welcome" src="./images/welcome-min.jpg" alt="welcome in many languages"/><p className="text-center"><a href="http://www.freepik.com">Designed by Freepik</a></p></TabPanel>
         <TabPanel>
           <Users userData={userData} />
         </TabPanel>
