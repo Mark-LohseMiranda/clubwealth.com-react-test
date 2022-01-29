@@ -39,10 +39,8 @@ function App() {
           <Tab>Users</Tab>
           <Tab>Cats</Tab>
           <Tab>Countries</Tab>
-          <Tab>Covid</Tab>
-          <Tab>SpaceX</Tab>
         </TabList>
-        <TabPanel>Welcome</TabPanel>
+        <TabPanel><img id="welcome" src="./images/welcome-min.jpg" alt="welcome in many languages"/></TabPanel>
         <TabPanel>
           <Users userData={userData} />
         </TabPanel>
@@ -52,8 +50,6 @@ function App() {
         <TabPanel>
           <Countries countriesData={countriesData} />
         </TabPanel>
-        <TabPanel>Covid</TabPanel>
-        <TabPanel>SpaceX</TabPanel>
       </Tabs>
     </div>
   );

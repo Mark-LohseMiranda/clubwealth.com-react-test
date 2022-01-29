@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  ListGroup,
+  ListGroupItem,
+} from "react-bootstrap";
 import "./Countries.css";
 
 function Countries({ countriesData }) {
@@ -40,30 +47,30 @@ function Countries({ countriesData }) {
           Name, Region, or Language
         </label>
       </div>
-     <Container fluid>
-      <Row xs={2} md={3} lg={4} xl={6} className="g-4">
-        {found?.map((data, index) => {
-          return (
-            <Col className="mx-auto" key={index}>
-              <Card className="h-100">
-                <Card.Img loading="lazy" variant="top" src={data.flags.png} />
-                <Card.Title>{data.name}</Card.Title>
-                <Card.Body>
-                  <ListGroup>
-                    <ListGroupItem>
-                      {data.languages.map((item, index) => {
-                        return <p key={index}>{item.name}</p>;
-                      })}
-                    </ListGroupItem>
-                    <ListGroupItem>{data.capital}</ListGroupItem>
-                    <ListGroupItem>{data.region}</ListGroupItem>
-                  </ListGroup>
-                </Card.Body>
-              </Card>
-            </Col>
-          );
-        })}
-      </Row>
+      <Container fluid>
+        <Row xs={2} md={3} lg={4} xl={6} className="g-4">
+          {found?.map((data, index) => {
+            return (
+              <Col className="mx-auto" key={index}>
+                <Card className="h-100">
+                  <Card.Img loading="lazy" variant="top" src={data.flags.png} />
+                  <Card.Title>{data.name}</Card.Title>
+                  <Card.Body>
+                    <ListGroup>
+                      <ListGroupItem>
+                        {data.languages.map((item, index) => {
+                          return <p key={index}>{item.name}</p>;
+                        })}
+                      </ListGroupItem>
+                      <ListGroupItem>Capital: {data.capital}</ListGroupItem>
+                      <ListGroupItem>Region: {data.region}</ListGroupItem>
+                    </ListGroup>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })}
+        </Row>
       </Container>
     </>
   );
